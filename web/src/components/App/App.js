@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import axios from 'axios'
 
 class App extends React.Component {
   state = {
@@ -7,12 +7,13 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch('/api/conferences')
-        .then(response => response.json())
-        .then(json => {
-            this.setState({conferences: json})
-        });
-        
+    axios.get('/api/conferences')
+    .then(response => {
+      this.setState({conferences: response.data})
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
 
   render() {
