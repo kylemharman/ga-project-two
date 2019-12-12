@@ -12,10 +12,11 @@ class App extends React.Component {
         .then(json => {
             this.setState({conferences: json})
         });
+        
   }
 
   render() {
-    const conferenceElements = this.state.conferences.map((conf) => <li>{conf.name}, {conf.city}</li>);
+    const conferenceElements = this.state.conferences.map((conf, id) => <li key={id}>{conf.name}, {conf.city}</li>);
     return (
       <div className="App">
         <header className="App-header">
