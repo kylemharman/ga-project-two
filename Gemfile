@@ -14,7 +14,7 @@ gem 'jwt', '~> 2.2', '>= 2.2.1'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Middleware that will make Rack-based apps CORS compatible.
-gem 'rack-cors', '~> 1.1'
+# gem 'rack-cors', '~> 1.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
